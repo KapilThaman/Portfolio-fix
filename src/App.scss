@@ -1,0 +1,673 @@
+body {
+   
+    font-family: "Anton", sans-serif;
+    justify-content: center;
+    align-items: center;
+  }
+  .image1256{
+    border-radius: 12px;
+  }
+  
+  
+  $shooting-time: 3000ms;
+  
+  .night {
+    position: absolute;
+    width: 11vw;
+    left: 713px;
+    height: 18vh;
+    top: 362px;
+    transform: rotateZ(45deg);
+  }
+  .night1 {
+    position: absolute;
+    width: 44vw;
+    height: 31vh;
+    left: 384px;
+    top: 549px;
+    transform: rotateZ(45deg);
+    
+    // animation: sky 200000ms linear infinite;
+  }
+  .detailsmain{
+    display:flex;
+    flex-direction:row;
+    height:50%;
+  }
+  .details1{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    flex:1;
+    gap:84px;
+    background-color:black;
+  }
+
+  @media only screen and (min-device-width: 500px) and (max-device-width: 700px)  {
+    .night{
+      display: none!important;
+    }
+    .night1 {
+      position: absolute;
+      width: 44vw;
+      height: 31vh;
+      left: -9px;
+      top: 549px;
+      transform: rotateZ(45deg);
+      
+      // animation: sky 200000ms linear infinite;
+    }
+
+    .buttondark1{
+      background-color: "black";
+      color: "yellow!important";
+      border: 1px solid yellow!important;
+      position: absolute;
+      transform-style: preserve-3d;
+      top: -50px;
+      right: -72vw;
+    }
+    .details1{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      flex:1;
+      gap:90px;
+      background-color:black;
+    }
+    .detailsmain{
+      display:flex;
+      flex-direction:column;
+      height:50%;
+    }
+
+
+  }
+  .keepleft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 60%;
+  }
+
+
+
+  @media only screen and (min-device-width: 200px) and (max-device-width: 500px)  {
+    .night{
+      display: none!important;
+    }
+    .night1 {
+      position: absolute;
+      width: 44vw;
+      height: 31vh;
+      left: -121px;
+      top: 549px;
+      transform: rotateZ(45deg);
+      
+      // animation: sky 200000ms linear infinite;
+    }
+
+    .buttondark1{
+      background-color: "black";
+      color: "yellow!important";
+      border: 1px solid yellow!important;
+      position: absolute;
+      transform-style: preserve-3d;
+      top: -50px;
+      right: -46vw;
+    }
+    .details1{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      flex:1;
+      gap:78px;
+      background-color:black;
+    }
+    .detailsmain{
+      display:flex;
+      flex-direction:column;
+      height:50%;
+    }
+   
+
+    .keepleft :has(h1) h1{
+      font-size: 40px;
+    }
+
+    .night2 {
+      position: absolute;
+      width: 66vw;
+      height: 32vh;
+      left:-144px;
+      transform: rotateZ(45deg);
+      
+      // animation: sky 200000ms linear infinite;
+    }
+
+  }
+
+  @media only screen and (min-device-width: 700px) and (max-device-width: 1500px)  {
+    .night{
+      display: none!important;
+    }
+    .night1 {
+      position: absolute;
+      width: 44vw;
+      height: 31vh;
+      left: -9px;
+      top: 549px;
+      transform: rotateZ(45deg);
+      
+      // animation: sky 200000ms linear infinite;
+    }
+
+    .buttondark1{
+      background-color: "black";
+      color: "yellow!important";
+      border: 1px solid yellow!important;
+      position: absolute;
+      transform-style: preserve-3d;
+      top: -50px;
+      right: -75vw;
+    }
+    .details1{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      flex:1;
+      gap:90px;
+      background-color:black;
+    }
+    .detailsmain{
+      display:flex;
+      flex-direction:column;
+      height:50%;
+    }
+
+
+  }
+
+  .night2 {
+    position: absolute;
+    width: 66vw;
+    height: 32vh;
+    transform: rotateZ(45deg);
+    
+    // animation: sky 200000ms linear infinite;
+  }
+  
+  .shooting_star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    // width: 100px;
+    height: 2px;
+    background: linear-gradient(
+      -45deg,
+      rgba(95, 145, 255, 1),
+      rgba(0, 0, 255, 0)
+    );
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+    animation: tail $shooting-time ease-in-out infinite,
+      shooting $shooting-time ease-in-out infinite;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1px);
+      right: 0;
+      // width: 30px;
+      height: 2px;
+      background: linear-gradient(
+        -45deg,
+        rgba(0, 0, 255, 0),
+        rgba(95, 145, 255, 1),
+        rgba(0, 0, 255, 0)
+      );
+      transform: translateX(50%) rotateZ(45deg);
+      border-radius: 100%;
+      animation: shining $shooting-time ease-in-out infinite;
+    }
+  
+    &::after {
+      // CodePen Error
+      // @extend .shooting_star::before;
+  
+      content: "";
+      position: absolute;
+      top: calc(50% - 1px);
+      right: 0;
+      // width: 30px;
+      height: 2px;
+      background: linear-gradient(
+        -45deg,
+        rgba(0, 0, 255, 0),
+        rgba(95, 145, 255, 1),
+        rgba(0, 0, 255, 0)
+      );
+      transform: translateX(50%) rotateZ(45deg);
+     
+      border-radius: 100%;
+      animation: shining $shooting-time ease-in-out infinite;
+      transform: translateX(50%) rotateZ(-45deg);
+    }
+  
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        $delay: random(9999) + 0ms;
+        top: calc(50% - #{random(400) - 200px});
+        left: calc(50% - #{random(300) + 0px});
+        animation-delay: $delay;
+        // opacity: random(50) / 100 + 0.5;
+  
+        &::before,
+        &::after {
+          animation-delay: $delay;
+        }
+      }
+    }
+  }
+  
+  @keyframes tail {
+    0% {
+      width: 0;
+    }
+  
+    30% {
+      width: 100px;
+    }
+  
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes shining {
+    0% {
+      width: 0;
+    }
+  
+    50% {
+      width: 30px;
+    }
+  
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes shooting {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(300px);
+    }
+  }
+  
+  @keyframes sky {
+    0% {
+      transform: rotate(45deg);
+    }
+  
+    100% {
+      transform: rotate(45 + 360deg);
+    }
+  }
+
+
+
+//   css of sunrise
+
+
+body {
+    background: #fff;
+    
+   
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .birdposition {
+    transform-style: preserve-3d;   
+    
+  }
+
+ 
+  
+  .world {
+    perspective: 328px;
+  }
+    
+  .sun {
+    position: absolute;
+    top: calc(50% + 40px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 55px;
+    border-radius: 100px 100px 0 0;
+    background: linear-gradient(0deg, rgba(white, 0.3) 0%, rgba(white, 1) 100%);
+    z-index: 999;
+    filter: blur(4px) contrast(2);
+  }
+  
+  .bg {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 400px);
+    width: 800px;
+    height: 300px;
+    background: yellow;
+    filter: blur(5px) contrast(100);
+  }
+  
+  .wave {
+    position: absolute;
+    top: calc(50% + 87px);
+    left: calc(50% - 60px);
+    width: 120px;
+    height: 12px;
+    background: #fff;
+    border-radius: 100%;
+    
+    &:not(:first-child) {
+      animation: wave 2000ms infinite linear;    
+    }
+  
+    &:nth-child(2) {
+      animation-delay: -500ms;
+    }
+    
+    &:nth-child(3) {
+      animation-delay: -1000ms;
+    }
+    
+    &:nth-child(4) {
+      animation-delay: -1500ms;
+    }
+    
+    &:nth-child(5) {
+      animation-delay: -1500ms;
+    }
+    
+    &:nth-child(6) {
+      animation-delay: -2000ms;
+    }
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: translateY(0) sclae(1) rotateZ(0);
+    }
+    50% {
+      transform: translateY(40px) scale(0.5) rotateZ(5deg);
+    }
+    100% {
+      transform: translateY(30px) scale(0) rotateZ(-40deg);
+    }
+  }
+  
+  .sea {
+    position: absolute;
+    top: calc(50% + 80px);
+    left: calc(50% - 400px);
+    width: 800px;
+    height: 68px;
+    background: rgba(blue, 0.5);
+    background: radial-gradient(ellipse at top, rgba(white, 1) 0%, rgba(gold, 0.1) 10%, rgba(chocolate, 1) 100%);
+  }
+  
+  .sky {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 400px);
+    width: 800px;
+    height: 240px;
+    background: rgba(blue, 0.5);
+    background: radial-gradient(ellipse at bottom, rgba(yellow, 1) 0%, rgba(khaki, 1) 15%, rgba(orange, 1) 100%);
+  }
+  
+  .horizon {
+    position: absolute;
+    top: 50%;
+   
+    height: 200px;
+    border-radius: 100%;
+    background: radial-gradient(ellipse at center, rgba(white, 0.4) 0%, rgba(white, 0) 70%);
+    filter: blur(10px);
+  }
+  
+  .sunset {
+    position: absolute;
+    width: 5%;
+
+    height: 18vh;
+    zoom: 350%;
+    
+ 
+    
+    border-radius: 7px;
+  }
+  
+
+  
+  .birdposition {
+    position: absolute;
+    top: calc(50% + 60px);
+    left: calc(50% - 40px);
+    
+    @for $i from 0 through 100 {
+      &:nth-of-type(#{$i}) {
+        transform: translate(random(600) - 300px, random(200) - 150px) rotateZ(random(40) - 20deg);
+        
+        .bird {
+          animation-duration: random(10000) + 5000ms;
+          animation-delay: random(20000) * -1ms;
+          
+          $wingDelay: random(20000) * -1ms;
+          
+          .wing {
+            animation-delay: $wingDelay;
+          }
+        }
+      }
+    }
+  }
+  
+  .bird {
+    position: absolute;
+    width: 80px;
+    animation: fly 8s linear infinite;
+    
+    .wing {
+      position: absolute;
+      width: 50%;
+      height: 20px;
+      border-top: 4px solid black;
+      border-radius: 100%;
+      
+      &.-left {
+        transform-origin: 100% 50%;
+        animation: wingLeft 0.8s cubic-bezier(0.445, 0.050, 0.550, 0.950) infinite alternate;
+      }
+      
+      &.-right {
+        right: 0;
+        transform-origin: 0 50%;
+        animation: wingRight 0.8s cubic-bezier(0.445, 0.050, 0.550, 0.950) infinite alternate;
+      }
+    }
+  }
+  
+  @keyframes fly {
+    0% {
+      opacity: 0;
+      transform: translateZ(500px);
+    }
+    
+    20% {
+      opacity: 1;
+      transform: translateZ(400px);
+    }
+    
+    100% {
+      transform: translateZ(0px) scale(0);
+    }
+  }
+  
+  @keyframes wingLeft {
+    0% {
+      transform: rotateZ(30deg);
+    }
+    
+    100% {
+      transform: rotateZ(-20deg);
+    }
+  }
+  
+  @keyframes wingRight {
+    0% {
+      transform: rotateZ(-30deg);
+    }
+    
+    100% {
+      transform: rotateZ(20deg);
+    }
+  }
+  
+
+// Bounce
+
+  .hi1{
+    animation: bounce 1s;
+    --distance: -20vh;
+    
+
+  }
+  .hi2{
+    animation: bounce 1s;
+    --distance: -20vh;
+    animation-delay: 0.75s;
+
+  }
+  .hi3{
+    animation: bounce 1s;
+    --distance: -20vh;
+    animation-delay: 1.5s;
+
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(calc(var(--distance) * 1.00));
+      animation-timing-function: ease-in;
+    }
+    28% {
+      transform: translateY(calc(var(--distance) * 0));
+      animation-timing-function: ease-out;
+    }  
+    44% {
+      transform: translateY(calc(var(--distance) * .32));
+      animation-timing-function: ease-in;
+    }  
+    62% {
+      transform: translateY(calc(var(--distance) * 0));
+      animation-timing-function: ease-out;
+    }      
+    72% {
+      transform: translateY(calc(var(--distance) * .1375));
+      animation-timing-function: ease-in;
+    }      
+    84% {
+      transform: translateY(calc(var(--distance) * 0));
+      animation-timing-function: ease-out;
+    }      
+    92% {
+      transform: translateY(calc(var(--distance) * .065));
+      animation-timing-function: ease-in;
+    }      
+    100% {
+      transform: translateY(calc(var(--distance) * 0));
+      animation-timing-function: ease-out;
+    }
+  }
+
+
+  // projects css
+
+  @mixin flex-center { display: flex; justify-content: center; align-items: center; }
+
+  .glassBox {
+    &, & * { box-sizing: border-box; transition: 400ms; }
+    width: 100%;
+    height: 400px;
+    max-width: 300px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    position: relative;
+    @include flex-center;
+    flex-direction: column;
+    &__imgBox {
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+      }
+    }
+    &__title {
+      text-align: center;
+      margin-top: 15px;
+      color:"black";
+      font-size: 20px;
+      font-weight: 400;
+      font-family: "Lato";
+    }
+    
+
+    &__content {
+      position: absolute;
+      right: 15px; bottom: 15px; left: 15px;
+      text-align: center;
+      color: #FFF;
+      font-size: 14px;
+      font-family: "Lato";
+      letter-spacing: .1em;
+      
+    }
+    &:hover &__imgBox {
+      transform: translateY(-50px);
+    }
+    &:hover &__imgBox img {
+      transform: translate(-20px, -40px) rotate(-15deg) scale(1.4);
+    }
+    &:hover &__title {
+      margin-top: 40px;
+    }
+  }
+  
+
+  
+  .CircularProgressbar{
+    width:10%;
+  }
+
+  
